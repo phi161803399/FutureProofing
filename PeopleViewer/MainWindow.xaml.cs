@@ -27,6 +27,13 @@ namespace PeopleViewer
 
         private void InterfaceFetchButton_Click(object sender, RoutedEventArgs e)
         {
+            ClearListBox();
+            IEnumerable people;
+            people = peopleRepo.GetPeople();
+            foreach (var person in people)
+            {
+                PersonListBox.Items.Add(person);
+            }
         }
 
         private void ClearButton_Click(object sender, RoutedEventArgs e)
