@@ -7,10 +7,10 @@ namespace PersonLibrary
 {
     public class PeopleRepository
     {
-        public Person[] GetPeople()
+        public List<Person> GetPeople()
         {
             CultureInfo MyCultureInfo = new CultureInfo("us-US");
-            var people = new Person[]
+            var people = new List<Person>
             {
                 new Person() { FirstName="John", LastName="Koenig",
                     StartDate = DateTime.Parse("10/17/1975", MyCultureInfo), Rating=6 },

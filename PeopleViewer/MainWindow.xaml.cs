@@ -17,7 +17,7 @@ namespace PeopleViewer
         private void ConcreteFetchButton_Click(object sender, RoutedEventArgs e)
         {
             ClearListBox();
-            Person[] people;
+            List<Person> people;
             people = peopleRepo.GetPeople();
             foreach (var person in people)
             {
